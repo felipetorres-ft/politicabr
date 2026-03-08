@@ -3,99 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PolíticaBR - Notícias do Brasil</title>
+<meta name="description" content="Poder, política e democracia brasileira">
+<title>PolíticaBR - Poder, política e democracia brasileira</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Georgia', serif; background: #f5f5f5; color: #222; }
-header { background: #922b21; color: white; padding: 20px 0; text-align: center; }
-header h1 { font-size: 2.5em; letter-spacing: 2px; }
-header p { font-size: 0.9em; opacity: 0.8; margin-top: 5px; }
-nav { background: rgba(0,0,0,0.2); padding: 10px 0; text-align: center; }
-nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; }
-.banner { background: #222; text-align: center; padding: 10px; }
-.banner img { max-width: 728px; width: 100%; }
-.container { max-width: 1200px; margin: 30px auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
-.main-news article { background: white; margin-bottom: 20px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-.main-news article img { width: 100%; height: 220px; object-fit: cover; background: #922b21; display: flex; align-items: center; justify-content: center; }
-.main-news article .content { padding: 20px; }
-.main-news article h2 { font-size: 1.3em; margin-bottom: 10px; color: #1a1a1a; }
-.main-news article h2 a { text-decoration: none; color: inherit; }
-.main-news article h2 a:hover { color: #922b21; }
-.main-news article p { color: #666; line-height: 1.6; font-size: 0.95em; }
-.tag { background: #922b21; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.75em; text-transform: uppercase; display: inline-block; margin-bottom: 10px; }
-.sidebar { }
-.sidebar-banner { background: white; padding: 10px; border-radius: 8px; text-align: center; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-.sidebar .widget { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-.sidebar .widget h3 { font-size: 1em; text-transform: uppercase; letter-spacing: 1px; color: #922b21; border-bottom: 2px solid #922b21; padding-bottom: 10px; margin-bottom: 15px; }
-.sidebar .widget ul { list-style: none; }
-.sidebar .widget ul li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.9em; }
-.sidebar .widget ul li a { text-decoration: none; color: #333; }
-footer { background: #1a1a1a; color: #aaa; text-align: center; padding: 30px; margin-top: 40px; font-size: 0.85em; }
-@media(max-width:768px) { .container { grid-template-columns: 1fr; } }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Georgia',serif;background:#f4f4f4;color:#222;}
+header{background:#1c4e80;color:white;padding:20px 0;text-align:center;}
+header h1{font-size:2.5em;letter-spacing:2px;}
+header p{font-size:0.95em;opacity:0.85;margin-top:6px;}
+nav{background:rgba(0,0,0,0.25);padding:10px 0;text-align:center;}
+nav a{color:white;text-decoration:none;margin:0 15px;font-size:0.9em;text-transform:uppercase;letter-spacing:1px;transition:opacity 0.2s;}
+nav a:hover{opacity:0.7;}
+.breaking{background:#e74c3c;color:white;padding:8px 20px;text-align:center;font-size:0.85em;font-weight:bold;}
+.container{max-width:1200px;margin:30px auto;padding:0 20px;display:grid;grid-template-columns:2fr 1fr;gap:30px;}
+.main-news article{background:white;margin-bottom:25px;border-radius:10px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,0.1);transition:transform 0.2s;}
+.main-news article:hover{transform:translateY(-3px);}
+.main-news article img{width:100%;height:240px;object-fit:cover;}
+.main-news article .content{padding:22px;}
+.main-news article h2{font-size:1.35em;margin-bottom:12px;color:#1a1a1a;line-height:1.4;}
+.main-news article h2 a{text-decoration:none;color:inherit;}
+.main-news article h2 a:hover{color:#1c4e80;}
+.main-news article p{color:#666;line-height:1.7;font-size:0.95em;margin-bottom:12px;}
+.tag{color:white;padding:4px 12px;border-radius:20px;font-size:0.75em;text-transform:uppercase;display:inline-block;margin-bottom:12px;font-weight:bold;}
+.leia-mais{font-size:0.9em;font-weight:bold;text-decoration:none;}
+.sidebar .widget{background:white;border-radius:10px;padding:22px;margin-bottom:22px;box-shadow:0 3px 12px rgba(0,0,0,0.1);}
+.sidebar .widget h3{font-size:0.9em;text-transform:uppercase;letter-spacing:1px;color:#1c4e80;border-bottom:3px solid #1c4e80;padding-bottom:10px;margin-bottom:15px;}
+.sidebar .widget ul{list-style:none;}
+.sidebar .widget ul li{padding:9px 0;border-bottom:1px solid #eee;font-size:0.9em;}
+.sidebar .widget ul li:last-child{border-bottom:none;}
+.sidebar .widget ul li a{text-decoration:none;color:#333;line-height:1.4;display:block;}
+.sidebar .widget ul li a:hover{color:#1c4e80;}
+.date-badge{color:#999;font-size:0.8em;margin-bottom:8px;}
+footer{background:#1a1a1a;color:#999;text-align:center;padding:30px;margin-top:40px;font-size:0.85em;}
+footer a{color:#ccc;text-decoration:none;}
+@media(max-width:768px){.container{grid-template-columns:1fr;}.main-news article img{height:200px;}header h1{font-size:1.8em;}}
 </style>
 </head>
 <body>
 <header>
   <h1>🏛️ PolíticaBR</h1>
-  <p>As melhores notícias sobre Política e Brasil</p>
+  <p>Poder, política e democracia brasileira</p>
 </header>
 <nav>
   <a href="/">Início</a>
   <a href="#">Últimas</a>
   <a href="#">Mais Lidas</a>
+  <a href="#">Vídeos</a>
   <a href="#">Contato</a>
 </nav>
-<div class="banner">
-  <a href="#"><img src="https://via.placeholder.com/728x90/333/fff?text=Publicidade" alt="Banner"></a>
-</div>
+<div class="breaking">🔴 AO VIVO: Acompanhe as últimas notícias em tempo real</div>
 <div class="container">
   <div class="main-news">
+    
     <article>
-      <div style="background:#922b21;height:220px;display:flex;align-items:center;justify-content:center;color:white;font-size:3em">🏛️</div>
+      <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80" alt="Congresso aprova reforma tributária completa: entenda o que muda para você" loading="lazy" onerror="this.style.background='#1c4e80';this.style.height='220px'">
       <div class="content">
-        <span class="tag">Destaque</span>
-        <h2><a href="noticia-1.html">Grande novidade no mundo de Política e Brasil surpreende especialistas</a></h2>
-        <p>Os últimos acontecimentos no setor de Política e Brasil estão movimentando todo o Brasil. Especialistas analisam o cenário atual e apontam as principais tendências para os próximos meses. Confira tudo que está acontecendo.</p>
+        <span class="tag" style="background:#1c4e80">Destaque</span>
+        <h2><a href="artigo-1.html">Congresso aprova reforma tributária completa: entenda o que muda para você</a></h2>
+        <p>Após meses de negociações, o Congresso Nacional aprovou em segundo turno a regulamentação completa da reforma tributária. A mudança simplifica o sistema de impostos sobre consumo e tem impacto direto ...</p>
+        <a href="artigo-1.html" class="leia-mais" style="color:#1c4e80">Leia mais →</a>
       </div>
     </article>
     <article>
-      <div style="background:#922b21;height:220px;display:flex;align-items:center;justify-content:center;color:white;font-size:3em">🏛️</div>
+      <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&q=80" alt="Pesquisa CNT/MDA: aprovação do governo federal sobe para 52% em março" loading="lazy" onerror="this.style.background='#1c4e80';this.style.height='220px'">
       <div class="content">
-        <span class="tag">Brasil</span>
-        <h2><a href="noticia-2.html">Brasil se destaca em Política e Brasil com resultados históricos</a></h2>
-        <p>O Brasil continua a mostrar seu potencial no setor de Política e Brasil. Com novos investimentos e parcerias estratégicas, o país avança em direção a conquistas inéditas que prometem impactar positivamente a vida de milhões de brasileiros.</p>
+        <span class="tag" style="background:#1c4e80">Pesquisas</span>
+        <h2><a href="artigo-2.html">Pesquisa CNT/MDA: aprovação do governo federal sobe para 52% em março</a></h2>
+        <p>A pesquisa mais recente aponta melhora na avaliação do governo após aprovação da reforma tributária e anúncios de programas sociais. A aprovação pessoal do presidente também cresceu....</p>
+        <a href="artigo-2.html" class="leia-mais" style="color:#1c4e80">Leia mais →</a>
       </div>
     </article>
     <article>
-      <div style="background:#922b21;height:220px;display:flex;align-items:center;justify-content:center;color:white;font-size:3em">🏛️</div>
+      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80" alt="STF retoma julgamento sobre IR para renda até R$ 5 mil — decisão pode beneficiar 35 mi" loading="lazy" onerror="this.style.background='#1c4e80';this.style.height='220px'">
       <div class="content">
-        <span class="tag">Exclusivo</span>
-        <h2><a href="noticia-3.html">Entenda o impacto das mudanças em Política e Brasil no dia a dia</a></h2>
-        <p>As transformações no mercado de Política e Brasil chegam com força ao cotidiano do brasileiro. Nossa equipe ouviu especialistas e trouxe uma análise completa sobre o que mudou e o que ainda está por vir neste setor tão importante.</p>
+        <span class="tag" style="background:#1c4e80">Tributação</span>
+        <h2><a href="artigo-3.html">STF retoma julgamento sobre IR para renda até R$ 5 mil — decisão pode beneficiar 35 mi</a></h2>
+        <p>O Supremo Tribunal Federal retomu na próxima semana o julgamento sobre a constitucionalidade da isenção do Imposto de Renda para trabalhadores que ganham até R$ 5 mil mensais, proposta aprovada pelo C...</p>
+        <a href="artigo-3.html" class="leia-mais" style="color:#1c4e80">Leia mais →</a>
+      </div>
+    </article>
+    <article>
+      <img src="https://images.unsplash.com/photo-1569163139599-0f4517e36f51?w=800&q=80" alt="Eleições 2026: levantamento aponta 8 pré-candidatos ao governo de São Paulo" loading="lazy" onerror="this.style.background='#1c4e80';this.style.height='220px'">
+      <div class="content">
+        <span class="tag" style="background:#1c4e80">Eleições 2026</span>
+        <h2><a href="artigo-4.html">Eleições 2026: levantamento aponta 8 pré-candidatos ao governo de São Paulo</a></h2>
+        <p>A corrida pelo governo do estado mais rico do Brasil já tem pelo menos 8 nomes sendo trabalhados por diferentes partidos. A pesquisa espontânea ainda mostra dispersão, mas dois nomes se destacam....</p>
+        <a href="artigo-4.html" class="leia-mais" style="color:#1c4e80">Leia mais →</a>
+      </div>
+    </article>
+    <article>
+      <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80" alt="Câmara aprova projeto que criminaliza fake news com pena de até 8 anos" loading="lazy" onerror="this.style.background='#1c4e80';this.style.height='220px'">
+      <div class="content">
+        <span class="tag" style="background:#1c4e80">Legislação</span>
+        <h2><a href="artigo-5.html">Câmara aprova projeto que criminaliza fake news com pena de até 8 anos</a></h2>
+        <p>O projeto de lei que criminaliza a produção e disseminação intencional de notícias falsas em período eleitoral e em situações de calamidade pública foi aprovado com 298 votos a favor e 132 contrários....</p>
+        <a href="artigo-5.html" class="leia-mais" style="color:#1c4e80">Leia mais →</a>
       </div>
     </article>
   </div>
   <div class="sidebar">
-    <div class="sidebar-banner">
-      <a href="#"><img src="https://via.placeholder.com/300x250/444/fff?text=Anuncio" alt="Anúncio" style="width:100%;border-radius:4px"></a>
-    </div>
     <div class="widget">
-      <h3>Mais Lidas</h3>
+      <h3>📰 Mais Lidas</h3>
       <ul>
-        <li><a href="#">🏛️ Notícia em destaque sobre Política e Brasil</a></li>
-        <li><a href="#">🏛️ Últimas atualizações do setor</a></li>
-        <li><a href="#">🏛️ Análise especial dos experts</a></li>
-        <li><a href="#">🏛️ O futuro de Política e Brasil no Brasil</a></li>
-        <li><a href="#">🏛️ Tendências para 2026</a></li>
+        <li><a href="artigo-1.html">🏛️ Congresso aprova reforma tributária completa: entenda o que ...</a></li>
+<li><a href="artigo-2.html">🏛️ Pesquisa CNT/MDA: aprovação do governo federal sobe para 52%...</a></li>
+<li><a href="artigo-3.html">🏛️ STF retoma julgamento sobre IR para renda até R$ 5 mil — dec...</a></li>
+<li><a href="artigo-4.html">🏛️ Eleições 2026: levantamento aponta 8 pré-candidatos ao gover...</a></li>
+<li><a href="artigo-5.html">🏛️ Câmara aprova projeto que criminaliza fake news com pena de ...</a></li>
+
       </ul>
     </div>
-    <div class="sidebar-banner">
-      <a href="#"><img src="https://via.placeholder.com/160x600/555/fff?text=Ad" alt="Anúncio" style="width:100%;border-radius:4px"></a>
+    <div class="widget">
+      <h3>📅 Publicado em</h3>
+      <p style="font-size:0.9em;color:#666;">Domingo, 8 de março de 2026 · Atualizado às 08:00</p>
+    </div>
+    <div class="widget">
+      <h3>📬 Newsletter</h3>
+      <p style="font-size:0.85em;color:#666;margin-bottom:12px;">Receba as melhores notícias direto no seu email</p>
+      <input type="email" placeholder="seu@email.com" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:5px;font-size:0.9em;margin-bottom:8px;">
+      <button style="width:100%;padding:8px;background:#1c4e80;color:white;border:none;border-radius:5px;cursor:pointer;font-weight:bold;">Assinar grátis</button>
     </div>
   </div>
 </div>
 <footer>
-  <p>&copy; 2026 PolíticaBR. Todos os direitos reservados. | Política de Privacidade | Contato</p>
+  <p>&copy; 2026 PolíticaBR. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a> | <a href="#">Contato</a></p>
 </footer>
 </body>
 </html>
