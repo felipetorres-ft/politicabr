@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PolíticaBR - Notícias do Brasil</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Georgia', serif; background: #f5f5f5; color: #222; }
+header { background: #922b21; color: white; padding: 20px 0; text-align: center; }
+header h1 { font-size: 2.5em; letter-spacing: 2px; }
+header p { font-size: 0.9em; opacity: 0.8; margin-top: 5px; }
+nav { background: rgba(0,0,0,0.2); padding: 10px 0; text-align: center; }
+nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 0.9em; text-transform: uppercase; letter-spacing: 1px; }
+.banner { background: #222; text-align: center; padding: 10px; }
+.banner img { max-width: 728px; width: 100%; }
+.container { max-width: 1200px; margin: 30px auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+.main-news article { background: white; margin-bottom: 20px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.main-news article img { width: 100%; height: 220px; object-fit: cover; background: #922b21; display: flex; align-items: center; justify-content: center; }
+.main-news article .content { padding: 20px; }
+.main-news article h2 { font-size: 1.3em; margin-bottom: 10px; color: #1a1a1a; }
+.main-news article h2 a { text-decoration: none; color: inherit; }
+.main-news article h2 a:hover { color: #922b21; }
+.main-news article p { color: #666; line-height: 1.6; font-size: 0.95em; }
+.tag { background: #922b21; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.75em; text-transform: uppercase; display: inline-block; margin-bottom: 10px; }
+.sidebar { }
+.sidebar-banner { background: white; padding: 10px; border-radius: 8px; text-align: center; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.sidebar .widget { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.sidebar .widget h3 { font-size: 1em; text-transform: uppercase; letter-spacing: 1px; color: #922b21; border-bottom: 2px solid #922b21; padding-bottom: 10px; margin-bottom: 15px; }
+.sidebar .widget ul { list-style: none; }
+.sidebar .widget ul li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.9em; }
+.sidebar .widget ul li a { text-decoration: none; color: #333; }
+footer { background: #1a1a1a; color: #aaa; text-align: center; padding: 30px; margin-top: 40px; font-size: 0.85em; }
+@media(max-width:768px) { .container { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>🏛️ PolíticaBR</h1>
+  <p>As melhores notícias sobre Política e Brasil</p>
+</header>
+<nav>
+  <a href="/">Início</a>
+  <a href="#">Últimas</a>
+  <a href="#">Mais Lidas</a>
+  <a href="#">Contato</a>
+</nav>
+<div class="banner">
+  <a href="#"><img src="https://via.placeholder.com/728x90/333/fff?text=Publicidade" alt="Banner"></a>
+</div>
+<div class="container">
+  <div class="main-news">
+    <article>
+      <div style="background:#922b21;height:220px;display:flex;align-items:center;justify-content:center;color:white;font-size:3em">🏛️</div>
+      <div class="content">
+        <span class="tag">Destaque</span>
+        <h2><a href="noticia-1.html">Grande novidade no mundo de Política e Brasil surpreende especialistas</a></h2>
+        <p>Os últimos acontecimentos no setor de Política e Brasil estão movimentando todo o Brasil. Especialistas analisam o cenário atual e apontam as principais tendências para os próximos meses. Confira tudo que está acontecendo.</p>
+      </div>
+    </article>
+    <article>
+      <div style="background:#922b21;height:220px;display:flex;align-items:center;justify-content:center;color:white;font-size:3em">🏛️</div>
+      <div class="content">
+        <span class="tag">Brasil</span>
+        <h2><a href="noticia-2.html">Brasil se destaca em Política e Brasil com resultados históricos</a></h2>
+        <p>O Brasil continua a mostrar seu potencial no setor de Política e Brasil. Com novos investimentos e parcerias estratégicas, o país avança em direção a conquistas inéditas que prometem impactar positivamente a vida de milhões de brasileiros.</p>
+      </div>
+    </article>
+    <article>
+      <div style="background:#922b21;height:220px;display:flex;align-items:center;justify-content:center;color:white;font-size:3em">🏛️</div>
+      <div class="content">
+        <span class="tag">Exclusivo</span>
+        <h2><a href="noticia-3.html">Entenda o impacto das mudanças em Política e Brasil no dia a dia</a></h2>
+        <p>As transformações no mercado de Política e Brasil chegam com força ao cotidiano do brasileiro. Nossa equipe ouviu especialistas e trouxe uma análise completa sobre o que mudou e o que ainda está por vir neste setor tão importante.</p>
+      </div>
+    </article>
+  </div>
+  <div class="sidebar">
+    <div class="sidebar-banner">
+      <a href="#"><img src="https://via.placeholder.com/300x250/444/fff?text=Anuncio" alt="Anúncio" style="width:100%;border-radius:4px"></a>
+    </div>
+    <div class="widget">
+      <h3>Mais Lidas</h3>
+      <ul>
+        <li><a href="#">🏛️ Notícia em destaque sobre Política e Brasil</a></li>
+        <li><a href="#">🏛️ Últimas atualizações do setor</a></li>
+        <li><a href="#">🏛️ Análise especial dos experts</a></li>
+        <li><a href="#">🏛️ O futuro de Política e Brasil no Brasil</a></li>
+        <li><a href="#">🏛️ Tendências para 2026</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-banner">
+      <a href="#"><img src="https://via.placeholder.com/160x600/555/fff?text=Ad" alt="Anúncio" style="width:100%;border-radius:4px"></a>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>&copy; 2026 PolíticaBR. Todos os direitos reservados. | Política de Privacidade | Contato</p>
+</footer>
+</body>
+</html>
