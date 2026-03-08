@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://felipetorres-ft.github.io/politicabr/sitemap.xml
